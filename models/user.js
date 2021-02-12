@@ -9,9 +9,9 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate(models) {
-      // define association here
-    }
+    // static associate(models) {
+    //   // define association here
+    // }
   };
   User.init({
     firstName: {
@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       validate: {
         notNull: {
-          msg: 'A first name is required',
+          msg: '"firstName" is required',
         },
         notEmpty: {
           msg: 'Please provide a first name',
@@ -31,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       validate: {
         notNull: {
-          msg: 'A last name is required',
+          msg: '"lastName" is required',
         },
         notEmpty: {
           msg: 'Please provide a last name',
@@ -44,7 +44,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       validate: {
         notNull: {
-          msg: 'An email is required',
+          msg: '"emailAddress" is required',
         },
         notEmpty: {
           msg: 'Please provide an email',
@@ -59,7 +59,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       validate: {
         notNull: {
-          msg: 'A password is required',
+          msg: '"password" is required',
         },
         notEmpty: {
           msg: 'Please provide a password',

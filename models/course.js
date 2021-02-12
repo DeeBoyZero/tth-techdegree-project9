@@ -9,9 +9,9 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate(models) {
-      // define association here
-    }
+    // static associate(models) {
+    //   // define association here
+    // }
   };
   Course.init({
     title: {
@@ -27,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
       },
     },
     description: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
       validate: {
         notNull: {
